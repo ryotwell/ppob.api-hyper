@@ -4,15 +4,20 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "start": "ts-node src/index.ts",
+    "dev": "nodemon src/index.ts",
     "build": "tsc",
-    "start": "yarn build && node dist/index.js"
+    "start:dist": "node dist/src/index.js",
+    "lint": "eslint --fix src test",
+    "typecheck": "tsc --noEmit",
+    "postinstall": "prisma generate"
   },
   "dependencies": {
     "hyper-express": "^6.17.3"
   },
   "devDependencies": {
     "@types/node": "^22.15.29",
-    "tsx": "^4.19.4",
+    "ts-node": "^10.9.2",
     "typescript": "^5.8.3"
   }
 }

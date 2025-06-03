@@ -1,1 +1,0 @@
-web: tsx src/index.ts
