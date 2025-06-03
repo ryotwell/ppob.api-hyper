@@ -6,6 +6,6 @@ app.get('/', (req, res) => {
     res.send('Hello, HyperExpress with TypeScript!');
 });
 
-app.listen(3000, () => {
+app.listen(8000, () => {
     console.log('Server berjalan di http://localhost:3000');
 });
