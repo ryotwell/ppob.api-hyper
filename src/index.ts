@@ -1,14 +1,10 @@
-import { Server } from 'hyper-express';
-import followrequestRoutes from './routes/followrequestRoutes';
+import dotenv from 'dotenv';
 
-const app = new Server();
+dotenv.config();
 
-app.get('/', (req, res) => {
-    res.send('Hello, HyperExpress with TypeScript!');
-});
+import app from './app';
+import { PORT } from './config';
 
-app.use('/api/followrequest', followrequestRoutes);
-
-app.listen(8000, () => {
-    console.log('Server berjalan di http://localhost:3000');
+app.listen(PORT, () => {
+    console.log(`Server listening on http://localhost:${PORT}`);
 });

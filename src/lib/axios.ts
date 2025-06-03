@@ -1,7 +1,8 @@
 import Axios from 'axios'
+import { DIGIFLAZZ_URL } from '../config'
 
 export const axios = Axios.create({
-    baseURL: 'https://api.digiflazz.com/v1',
+    baseURL: DIGIFLAZZ_URL,
     headers: {
         'Content-Type': 'application/json',
         Accept: 'application/json',
