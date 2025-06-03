@@ -15,13 +15,13 @@ const transactionSchema = z.object({
 
 router.post('/transaction', async (req: Request, res: Response) => {
     try {
-        const validatedData = transactionSchema.parse(req.body);
+        const validatedData = transactionSchema.parse(await req.json());
 
         const { data } = await axios.post('/transaction', validatedData);
 
         return res.status(200).json(data);
     } catch (error: any) {
-        // console.error('Failed to send transaction to Digiflazz:', error);
+        console.error('Failed to send transaction to Digiflazz:', error);
         console.error('Digiflazz error response:', error.response?.data);
 
         if (error instanceof z.ZodError) {

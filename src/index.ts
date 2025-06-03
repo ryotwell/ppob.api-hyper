@@ -9,6 +9,6 @@ app.get('/', (req, res) => {
 
 app.use('/api/followrequest', followrequestRoutes);
 
-app.listen(8000, () => {
+app.listen(3000, () => {
     console.log('Server berjalan di http://localhost:3000');
 });
