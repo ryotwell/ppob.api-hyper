@@ -10,7 +10,9 @@
     "start:dist": "node dist/src/index.js"
   },
   "dependencies": {
-    "hyper-express": "^6.17.3"
+    "axios": "^1.9.0",
+    "hyper-express": "^6.17.3",
+    "zod": "^3.25.49"
   },
   "devDependencies": {
     "@types/node": "^22.15.29",
